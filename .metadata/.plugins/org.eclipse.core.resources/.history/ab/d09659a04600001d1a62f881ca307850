@@ -1,0 +1,52 @@
+package Recursions.KunalKushwahaYT.subsetsubsequences;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class Permutations {
+	
+	public static List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> ans = new ArrayList<>();
+        
+        solve(nums, ans, 0);
+        
+        return ans;
+        
+    }
+    
+    public static void solve(int[] nums, List<List<Integer>> ans, int index) {
+        
+        if(index <= nums.length) {
+        	List<Integer> l = IntStream.of(nums).boxed().collect(Collectors.toList());
+        	List list = Arrays.asList(nums);
+        	ans.add(l);
+            return;
+        }
+        
+        for(int j=index; j<nums.length; j++) {
+            swap(index,j,nums);
+            solve(nums, ans, index+1);
+            
+            //backtrack :
+            swap(index,j,nums);
+        }
+        
+    }
+    
+    public static void swap(int i, int j, int[] nums) {
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
+    }
+
+	public static void main(String[] args) {
+		int[] nums = {1,2,3};
+		
+		System.out.println(permute(nums));
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package Recursions.KunalKushwahaYT.subsetsubsequences;
+
+public class SubsetsPrint {
+	
+	public static void printSubsets(String ip, String op) {
+		if(ip.isEmpty()) {
+			System.out.println(op);
+			return;
+		}
+		
+		char ch = ip.charAt(0);
+		printSubsets(ip.substring(1), ch+op);
+		printSubsets(ip.substring(1), op);
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

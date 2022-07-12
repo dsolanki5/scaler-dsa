@@ -1,0 +1,19 @@
+package Recursions.KunalKushwahaYT;
+
+import java.util.List;
+
+class Emp {
+	int empid;
+	String name;
+}
+
+public class TestAnyCode {
+	
+	List<E>
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

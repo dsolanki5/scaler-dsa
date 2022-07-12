@@ -1,0 +1,22 @@
+package Recursions.KunalKushwahaYT;
+
+public class ReverseOfNo {
+	static int rev=0;
+	static void reverse(int n) {
+		if(n==0)
+			return ;
+		
+		rev = (rev*10) + (n%10);
+		
+		reverse(n/10);		
+	}
+
+	public static void main(String[] args) {
+		System.out.println(reverse(1834));
+//		int r = 0;
+//		r = r*10 + 4;
+//		System.out.println(r);
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+package Recursions.KunalKushwahaYT;
+
+public class ReverseOfNo {
+	static int rev;
+	static int reverse(int n) {
+		if(n/10 == 0)
+			return n;
+		
+		return (n%10)*10+reverse(n/10);		
+	}
+
+	public static void main(String[] args) {
+		System.out.println(reverse(1824));
+	}
+
+}

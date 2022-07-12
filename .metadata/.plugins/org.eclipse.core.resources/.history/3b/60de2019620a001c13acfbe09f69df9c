@@ -1,0 +1,45 @@
+package BasicsOfMaths_1;
+
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * Rearrange a given array so that Arr[i] becomes Arr[Arr[i]] with O(1) extra space.
+ * Example:
+ * Input : [1, 0]   ||   Return : [0, 1]
+ * 
+ * Lets say N = size of the array. Then, following holds true :
+ * All elements in the array are in the range [0, N-1]
+ * N * N does not overflow for a signed integer
+ * 
+ * @author Administrator
+ *
+ */
+public class RearrangeArray {
+	
+public static void arrange(List<Integer> A) {
+	    
+	    int d=0;
+	    for(int i=0; i<A.size(); i++)
+	    {
+	        d =(d * 10) + A.get(A.get(i));
+	    }
+	    
+	    int i=A.size()-1;
+	    while(d>0){
+	        A.set(i,d%10);
+	        d=d/10;
+	        i--;
+	    }
+	    
+	}
+
+	public static void main(String[] args) {
+		List<Integer> A = Arrays.asList(1,0);
+		System.out.println(A);
+		arrange(A);
+		System.out.println(A);
+
+	}
+
+}

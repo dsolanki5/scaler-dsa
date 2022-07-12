@@ -1,0 +1,19 @@
+package Recursions.KunalKushwahaYT;
+
+public class CountZeros {
+
+	public static void main(String[] args) {
+		System.out.println(countZeros(102030));
+
+	}
+
+	private static int countZeros(int n) {
+		return helperCountZeros(n,0);
+	}
+
+	private static int helperCountZeros(int n, int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

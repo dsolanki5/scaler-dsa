@@ -1,0 +1,28 @@
+package Recursions.KunalKushwahaYT;
+
+public class ReverseOfNo {
+	static int rev=0;
+	static void reverse(int n) {
+		if(n==0)
+			return ;
+		
+		rev = (rev*10) + (n%10);
+		
+		reverse(n/10);		
+	}
+	
+	static int reverse2(int n) {
+		int noofDigits = (int)(Math.log10(n)) + 1;  //covered in Maths video of Kunal
+		return helper(n)
+	}
+
+	public static void main(String[] args) {
+		reverse(50);
+		System.out.println(rev);
+//		int r = 0;
+//		r = r*10 + 4;
+//		System.out.println(r);
+		
+	}
+
+}

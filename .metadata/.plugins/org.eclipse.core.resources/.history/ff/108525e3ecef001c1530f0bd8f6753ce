@@ -1,0 +1,23 @@
+package Recursions.KunalKushwahaYT;
+
+public class PrintPatterns {
+
+	public static void main(String[] args) {
+		printPattern1(4,4);
+	}
+
+	private static void printPattern1(int r, int c) {
+		if(r == 0)
+			return;
+		
+		int col = c;
+		while(col>0) {
+			System.out.print("*");
+			col--;
+		}
+		System.out.println();
+		
+		printPattern1(r-1, col-1);
+	}
+
+}

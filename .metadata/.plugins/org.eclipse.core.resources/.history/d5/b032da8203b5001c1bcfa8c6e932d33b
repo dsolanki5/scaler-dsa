@@ -1,0 +1,42 @@
+package BinarySearch;
+
+public class PivotIndex {
+	
+	public static int pivotIndex(int[] nums) {
+        int n = nums.length;
+        int[] ps = new int[n];
+        ps[0] = nums[0];
+        
+        for(int i=1; i<n; i++){
+            ps[i] = ps[i-1]+nums[i];
+        }
+        
+        int s=0, e=n-1;
+        int mid = s + (e-s)/2;
+        
+        while(s<e) {
+            int lsum = mid-1 >= 0?ps[mid-1]:ps[mid];
+            int rsum = ps[n-1]-ps[mid];
+                
+            if(lsum == rsum) {
+                return mid;
+            }
+            else if(lsum < rsum) {
+                s=mid+1;
+            }
+            else {
+                e=mid;
+            }
+            
+            mid = s + (e-s)/2;
+        }
+        return -1;
+    }
+
+	public static void main(String[] args) {
+		int [] ar = {1,2,3};
+		System.out.println(pivotIndex(ar));
+
+	}
+
+}

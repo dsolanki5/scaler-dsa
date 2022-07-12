@@ -1,0 +1,22 @@
+package Strings;
+
+public class ReverseString {
+	
+	public static void main(String[] args) {
+		String A = "abcde";
+		
+		char[] ca = A.toCharArray();
+		
+		for(int i=0, j=ca.length-1; i<=j; i++, j--) {
+			
+			char t = ca[i];
+			ca[i] = ca[j];
+			ca[j] = t;
+		}
+		
+		A = ca.toString();
+		
+		System.out.println(A);
+	}
+
+}

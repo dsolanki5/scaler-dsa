@@ -1,0 +1,28 @@
+package Recursions.KunalKushwahaYT;
+
+import java.util.Iterator;
+
+public class IsSortedArray {
+
+	public static void main(String[] args) {
+		int[] arr = {1,2,4,8,12,12};
+		
+		boolean flag = false;
+		for(int i=0; i<arr.length-1; i++) {
+			if(arr[i] < arr[i+1]) {
+				continue;
+			}
+			else {
+				flag=true;
+				System.out.println("Not Sorted Array");
+				break;
+			}
+		}
+		
+		if(!flag) {
+			System.out.println("Array is sorted");
+		}
+
+	}
+
+}

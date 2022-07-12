@@ -1,0 +1,30 @@
+package Recursions.KunalKushwahaYT;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Emp {
+	int empid;
+	String name;
+	
+	public Emp(int empid, String name) {
+		this.empid = empid;
+		this.name = name;
+	}
+}
+
+public class TestAnyCode {
+	
+	List<Emp> al = new ArrayList<Emp>();
+	
+
+	public static void main(String[] args) {
+		Emp e1= new Emp(1, "Deepak");
+		Emp e2 = new Emp(2, "Manish");
+		Emp e3 = new Emp(3, "Jeeni");
+		
+		
+
+	}
+
+}

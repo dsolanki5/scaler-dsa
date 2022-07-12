@@ -1,0 +1,33 @@
+package BinarySearch;
+
+public class SquareRoot {
+	
+	public static int sqrtN(long N) {
+		long s = 0L;
+        long e = N;
+        long mid = s + (e-s)/2;
+        long ans = -1L;
+        
+        while(s<=e) {
+        	if((mid*mid) == N) {
+        		return (int)mid;
+        	}
+            if((mid*mid) > N) {
+            	e = mid-1;
+            }
+            else {
+            	ans = mid;
+            	s = mid+1;
+            }
+            mid = s + (e-s)/2;
+        }
+        return (int)ans;
+	}
+
+	public static void main(String[] args) {
+		
+		System.out.println(sqrtN(25));
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package Recursions.KunalKushwahaYT;
+
+public class SumOfDigits {
+	
+	static int sumOfNNos(int n) {
+		if(n == 0)
+			return 0;
+		
+		return n + sumOfNNos(n-1);
+	}
+
+	public static void main(String[] args) {
+		System.out.println(sumOfNNos(5));
+
+	}
+
+}

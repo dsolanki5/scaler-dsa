@@ -1,0 +1,5 @@
+package jeeniSelenium;
+
+public class Locator {
+
+}

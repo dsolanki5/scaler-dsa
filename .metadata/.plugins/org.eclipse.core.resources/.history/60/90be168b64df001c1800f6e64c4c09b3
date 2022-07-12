@@ -1,0 +1,38 @@
+package Strings;
+
+import java.util.Arrays;
+
+public class ReverseString {
+	
+	public static String reverseString(String A) {
+		char[] ca = A.toCharArray();
+		
+		for(int i=0, j=ca.length-1; i<=j; i++, j--) {
+			
+			char t = ca[i];
+			ca[i] = ca[j];
+			ca[j] = t;
+		}
+		
+		return Arrays.toString(ca).copyValueOf(ca);
+	}
+	
+	public static void main(String[] args) {
+		String A = "abcde";
+		
+		A = reverseString(A);
+				
+		System.out.println(A);
+		
+		String revWords = "My Name is Deepak";
+		
+		//Using String Builder :
+//		A = new StringBuilder(A).reverse().toString();
+//		A="bcde";
+//		
+//		System.out.println(Character.isLetter(A.charAt(0)));
+				
+		//System.out.println(A);
+	}
+
+}

@@ -1,0 +1,34 @@
+package Recursions.KunalKushwahaYT;
+
+public class SelectionSort {
+
+	static void selection(int[] arr, int n, int i, int max)
+	{
+		if(n==0)
+			return;
+		
+		if(i<n) {
+			if(arr[i] > arr[i+1])
+				max = i;
+			
+			selection(arr, n, i+1, max); //(j++)
+		}
+		else {
+			//swap
+			int t = arr[max];
+			arr[max] = arr[n];
+			arr[n] = t;
+			
+			//rec(i++)
+			selection(arr, n-1, 0, max);
+		}
+	}
+	
+	public static void main(String[] args) {
+		int[] arr = {5,2,8,1,7,3};
+		//System.out.println(selection(arr, arr.length-1, 0, 0));
+		selection(arr, arr.length-1, 0, 0);
+
+	}
+
+}

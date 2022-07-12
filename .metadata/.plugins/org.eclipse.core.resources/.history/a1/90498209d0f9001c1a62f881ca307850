@@ -1,0 +1,17 @@
+package Recursions.KunalKushwahaYT.subsetsubsequences;
+
+public class SubsetsPrint {
+	
+	public static void printSubsets(String ip, String op) {
+		if(ip.isEmpty()) {
+			System.out.println(op);
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

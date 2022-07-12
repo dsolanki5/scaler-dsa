@@ -1,0 +1,31 @@
+package Recursions.KunalKushwahaYT.subsetsubsequences;
+
+import java.util.Arrays;
+
+public class SubseqPrint {
+	
+	public static void printSubseq(String ip, String op) {
+		if(ip.isEmpty()) {
+			System.out.println(op);
+			return;
+		}
+		
+		char ch = ip.charAt(0);
+		printSubseq(ip.substring(1), op+ch);
+		printSubseq(ip.substring(1), op);
+		
+	}
+
+	public static void main(String[] args) {
+		
+		//printSubseq("abcd", "");
+		
+		int[] nums = {1,2,3,5};
+		
+		int[] nums2 = Arrays.copyOf(nums, 1);
+		
+		System.out.println(Arrays.toString(nums2));
+
+	}
+
+}

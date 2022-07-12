@@ -1,0 +1,23 @@
+package Recursions.KunalKushwahaYT;
+
+import java.util.Arrays;
+
+public class MergeSort {
+	
+	static int[] mergeSort(int[] arr, int s, int e ) {
+		
+		
+		int mid = s + (e-s)/2;
+		int[] left = mergeSort(arr, s, mid);
+		int[] right = mergeSort(arr, mid+1, e);
+	}
+
+	public static void main(String[] args) {
+		int[] arr = {5,2,8,1,7,3};
+		
+		arr = mergeSort(arr, 0, arr.length-1);
+		
+		System.out.println(Arrays.toString(arr));
+	}
+
+}
