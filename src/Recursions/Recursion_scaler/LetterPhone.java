@@ -1,4 +1,4 @@
-package Recursion;
+package Recursions.Recursion_scaler;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -6,6 +6,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+/**
+ * https://leetcode.com/problems/permutations/
+ * @author Deepak Solanki
+ *
+ */
 public class Permutations {
 	
 	public static void permuteStr(String ip) {

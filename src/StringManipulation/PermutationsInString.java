@@ -2,6 +2,12 @@ package StringManipulation;
 
 import java.util.Arrays;
 
+/**
+ * https://leetcode.com/problems/permutation-in-string/
+ * @author Deepak Solanki
+ *
+ */
+
 public class PermutationsInString {
 	
 public static boolean checkInclusion(String s1, String s2) {

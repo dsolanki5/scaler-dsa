@@ -1,4 +1,4 @@
-package Recursion;
+package Recursions.Recursion_scaler;
 
 /**
  * Problem Description:

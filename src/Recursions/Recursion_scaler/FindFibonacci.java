@@ -1,4 +1,4 @@
-package Recursion;
+package Recursions.Recursion_scaler;
 
 /**
  * The Fibonacci numbers are the numbers in the following integer sequence.

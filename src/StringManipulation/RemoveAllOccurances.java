@@ -1,5 +1,10 @@
 package StringManipulation;
 
+/**
+ * https://leetcode.com/problems/remove-all-occurrences-of-a-substring/
+ * @author Deepak Solanki
+ *
+ */
 public class RemoveAllOccurances {
 
 	public static void main(String[] args) {
@@ -20,18 +25,9 @@ public class RemoveAllOccurances {
 		while(j != -1) {
 			
 			s = s.substring(0,j) + s.substring(j+part.length());
-//			i=j-1;
-//			ans+=s.substring(i,j);
-//			s=ans+s.substring(j+part.length());
-//			i=ans.length()+1;
-//			
-			j = s.indexOf(part);
-			
-			
+			j = s.indexOf(part);			
 		}
-		
 		
 		return s;
 	}
-
 }
