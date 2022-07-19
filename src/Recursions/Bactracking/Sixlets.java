@@ -1,4 +1,4 @@
-package Recursions.Recursion_Bactracking_1;
+package Recursions.Bactracking;
 
 import java.util.Arrays;
 import java.util.List;

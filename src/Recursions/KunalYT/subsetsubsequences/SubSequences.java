@@ -1,4 +1,4 @@
-package Recursions.KunalKushwahaYT.subsetsubsequences;
+package Recursions.KunalYT.subsetsubsequences;
 
 import java.util.ArrayList;
 

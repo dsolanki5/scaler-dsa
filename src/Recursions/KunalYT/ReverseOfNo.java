@@ -1,4 +1,4 @@
-package Recursions.KunalKushwahaYT;
+package Recursions.KunalYT;
 
 public class ReverseOfNo {
 	static int rev=0;
