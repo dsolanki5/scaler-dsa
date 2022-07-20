@@ -1,10 +1,15 @@
-package Recursions.Bactracking;
+package Recursions.LoveBabbar_Recursions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
+ * @author Deepak Solanki
+ *
+ */
 public class RatInMaze {
 	
 	public static int moveR_D_Count(int r, int c, int n) {
