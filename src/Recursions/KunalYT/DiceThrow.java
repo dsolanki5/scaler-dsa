@@ -1,4 +1,4 @@
-package Recursions.KunalYT.subsetsubsequences;
+package Recursions.KunalYT;
 
 import java.util.ArrayList;
 
@@ -60,7 +60,6 @@ public class DiceThrow {
 		System.out.println("Using No Of Dice Faces: ");
 		int noOfFaces = 8;
 		System.out.println(solveDiceLstWithFace(4, "", noOfFaces));
-
 	}
 
 }
