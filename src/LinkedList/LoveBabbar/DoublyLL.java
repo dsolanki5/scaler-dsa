@@ -1,21 +1,11 @@
 package LinkedList.LoveBabbar;
 
-class Node {
-	int data;
-	Node prev;
-	Node next;
-	
-	Node(int data) {
-		this.data = data;
-	}
-}
-
 public class DoublyLL {
 	
-	static Node head;
-	static Node tail;
+	static DoublyNode head;
+	static DoublyNode tail;
 	
-	static void printLL(Node head) {
+	static void printLL(DoublyNode head) {
 		while(head!=null) {
 			System.out.print("-"+head.data+"-");
 			head=head.next;
@@ -24,7 +14,7 @@ public class DoublyLL {
 	}
 	
 	public static void insertAtTop(int data) {
-		Node node = new Node(data);
+		DoublyNode node = new DoublyNode(data);
 		if(head == null) {
 			head = node;
 			tail = node;
@@ -38,7 +28,7 @@ public class DoublyLL {
 	}
 	
 	public static void insertAtEnd(int data) {
-		Node node = new Node(data);
+		DoublyNode node = new DoublyNode(data);
 		if(tail == null) {
 			head = node;
 			tail = node;
@@ -57,7 +47,7 @@ public class DoublyLL {
 		}
 		
 		int cnt=0;
-		Node temp = head;
+		DoublyNode temp = head;
 		while(temp!=null) {
 			cnt++;
 			temp=temp.next;
@@ -73,7 +63,7 @@ public class DoublyLL {
 			return;
 		}
 		
-		Node node = new Node(data);
+		DoublyNode node = new DoublyNode(data);
 		temp = head; cnt=1;
 		while(cnt < pos-1) {
 			temp = temp.next;
@@ -97,7 +87,7 @@ public class DoublyLL {
 		}
 		
 		int cnt=0;
-		Node temp = head;
+		DoublyNode temp = head;
 		while(temp!=null) {
 			cnt++;
 			temp=temp.next;
@@ -119,21 +109,21 @@ public class DoublyLL {
 	}
 
 	private static void deleteTail() {
-		Node prevNode = tail.prev;
+		DoublyNode prevNode = tail.prev;
 		prevNode.next=null;
 		tail.prev=null;
 		tail = prevNode;		
 	}
 
 	private static void deleteHead() {
-		Node nextNode = head.next;
+		DoublyNode nextNode = head.next;
 		nextNode.prev = null;
 		head.next = null;
 		head = nextNode;		
 	}
 
 	public static void main(String[] args) {
-		Node temp = new Node(10);
+		DoublyNode temp = new DoublyNode(10);
 		head = temp;
 		tail = temp;
 		printLL(head);

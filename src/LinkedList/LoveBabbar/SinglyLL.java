@@ -54,11 +54,6 @@ public class SinglyLL {
 			return;
 		}
 		
-//		if(temp.next == null) {
-//			insertAtLast(data);
-//			return;
-//		}
-		
 		SinglyLL.Node nodeToInsert = new Node(data);
 		nodeToInsert.next = temp.next;
 		temp.next = nodeToInsert;
