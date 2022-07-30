@@ -8,11 +8,11 @@ package LinkedList.LoveBabbar;
  * @param <T>
  */
 
-class Node<T> {
+class Node1<T> {
     T data;
-    Node<T> next;
+    Node1<T> next;
 
-    public Node(T data) {
+    public Node1(T data) {
         this.data = data;
     }
     
@@ -23,17 +23,17 @@ class Node<T> {
 }
 
 public class Sort0s1s2s_LL {
-	static Node<Integer> head;
-	static Node<Integer> tail;
+	static Node1<Integer> head;
+	static Node1<Integer> tail;
 	
 	static void insertAtLast(int data) {
-		Node<Integer> temp = new Node<>(data);
+		Node1<Integer> temp = new Node1<>(data);
 		if(head == null) {
 			head = temp;
 			tail = temp;
 			return;
 		}
-		Node<Integer> p = head;
+		Node1<Integer> p = head;
 		while(p.next != null) {
 			p = p.next;
 		}
@@ -41,11 +41,11 @@ public class Sort0s1s2s_LL {
 		tail=temp;
 	}
 	
-	public static Node<Integer> sortList_Approach1(Node<Integer> head) {
+	public static Node1<Integer> sortList_Approach1(Node1<Integer> head) {
         int zeroCnt = 0;
         int oneCnt = 0;
         int twoCnt = 0;
-        Node<Integer> curr = head;
+        Node1<Integer> curr = head;
         
         while(curr != null) {
             if(curr.data == 0) {
@@ -79,18 +79,18 @@ public class Sort0s1s2s_LL {
         return head;
 	}
 	
-	public static Node<Integer> sortList_Approach2(Node<Integer> head) {
+	public static Node1<Integer> sortList_Approach2(Node1<Integer> head) {
 		if(head == null) {
             return head;
         }
-        Node<Integer> zeroHead = new Node<>(-1);
-        Node<Integer> zeroTail = zeroHead;
-        Node<Integer> oneHead = new Node<>(-1);
-        Node<Integer> oneTail = oneHead;
-        Node<Integer> twoHead = new Node<>(-1);
-        Node<Integer> twoTail = twoHead;
+        Node1<Integer> zeroHead = new Node1<>(-1);
+        Node1<Integer> zeroTail = zeroHead;
+        Node1<Integer> oneHead = new Node1<>(-1);
+        Node1<Integer> oneTail = oneHead;
+        Node1<Integer> twoHead = new Node1<>(-1);
+        Node1<Integer> twoTail = twoHead;
         
-        Node<Integer> curr = head;
+        Node1<Integer> curr = head;
         
         while(curr != null) {
             int value = curr.data;
