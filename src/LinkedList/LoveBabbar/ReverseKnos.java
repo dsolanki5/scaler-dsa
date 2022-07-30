@@ -1,5 +1,8 @@
 package LinkedList.LoveBabbar;
 
+import java.util.Collections;
+import java.util.LinkedList;
+
 public class ReverseKnos {
 	
 	static SinglyNode head;
@@ -16,34 +19,26 @@ public class ReverseKnos {
 		tail=temp;
 	}
 	
-	static void reverseKNos(int K) {
-		SinglyNode curr = head;
-		SinglyNode prev = curr;
-		SinglyNode start = null;
+	static SinglyNode reverseKNos(SinglyNode head2, int K) {
+		SinglyNode curr = head2;
+		SinglyNode nxt = null;
+		SinglyNode prev = null;
 		
-		while(curr != null) {
-			
-			int cnt = 1;
-			while(cnt < K && curr!= null) {
-				curr = curr.next;
-				cnt++;
-			}
-			
-			while(curr != null && prev != curr) {
-				SinglyNode temp = prev.next;
-				prev.next = start;
-				start = prev;
-				prev = temp;
-			}
-			curr = curr.next;
-			prev.next = start;
-			start = prev;
-			
-			prev = curr;			
+		int cnt=0;
+		while(curr != null && cnt<K) {
+			nxt = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = nxt;
+			cnt++;
 		}
 		
-//		prev.next = start;
-		head = prev;
+		if(curr != null) {
+			head2.next = reverseKNos(curr, K);
+		}
+		
+		return prev;
+		
 	}
 
 	public static void main(String[] args) {
@@ -61,7 +56,7 @@ public class ReverseKnos {
 		System.out.println(head);
 		
 		int K=2;
-		reverseKNos(K);
+		head = reverseKNos(head, K);
 		System.out.println(head);
 		
 
