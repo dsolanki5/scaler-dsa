@@ -14,26 +14,30 @@ class Stack {
 		this.top = -1;
 	}
 	
-	public int getSize() {
-		return size;
-	}
-
-	public int getTop() {
-		return top;
-	}
-
-	public int[] getArr() {
-		return arr;
-	}
-	
 	//push
 	public void push(int data) {
-		if(top >= size) {
-			System.err.println("Stack is Full !");
+		if(top >= size-1) {
+//			System.err.println("Stack is Full !");
+//			return;
+			
+			//create new array with extended size
+			int[] arrNew = new int[size*2];
+			
+			// copy values of exisiting stack into new array then push new elemnt
+			int i=0;
+			for(; i<arr.length; i++) {
+				arrNew[i] = arr[i];
+			}
+			arrNew[i] = data;
+			top = i;
+			
+			//point this.arr to new arr
+			arr = arrNew;
 			return;
 		}
 		++top;
 		arr[top] = data;		
+		System.out.println("push: top: "+top);
 	}
 	
 	//pop
@@ -73,14 +77,20 @@ public class StackMain {
 		
 		stack.push(10);
 		stack.push(20);
-		stack.printStack();
-		System.out.println(stack.pop());
+//		stack.printStack();
+//		System.out.println(stack.pop());
 		stack.peek();
-		System.out.println(stack.pop());
-		stack.peek();
+//		System.out.println(stack.pop());
+//		stack.peek();
 		stack.push(5);
+		stack.push(7);
+		stack.push(51);
 		stack.printStack();
-		
+		stack.peek();
+		stack.push(1);
+		stack.printStack();
+		stack.peek();
+		System.out.println(stack.pop());
 		
 	}
 	
