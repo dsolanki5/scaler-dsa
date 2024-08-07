@@ -43,7 +43,7 @@ public class SinglyLL {
 		}
 		Node temp = head;
 		int cnt=1;
-		while(cnt < pos) {
+		while(cnt < pos-1) {
 			temp = temp.next;
 			cnt++;
 		}
@@ -88,33 +88,40 @@ public class SinglyLL {
 		tail=temp;
 		System.out.println(head);
 		
-		temp = new SinglyLL.Node(20);
-		tail = temp;
-		head.next = tail;
-		
+		insertAtLast(20);
+		insertAtLast(30);
 		System.out.println(head);
-		
-		int data = 30;
-		insertAtFirst(data);
-		System.out.println("After inserting at Head: "+data);
+		insertAtPos(25, 3);
 		System.out.println(head);
+		deleteNodeAtPos(3);
 		
-		data = 40;
-		insertAtLast(data);
-		System.out.println("After inserting at Tail: "+data);
+//		temp = new SinglyLL.Node(20);
+//		tail = temp;
+//		head.next = tail;
+//		
+//		System.out.println(head);
+//		
+//		int data = 30;
+//		insertAtFirst(data);
+//		System.out.println("After inserting at Head: "+data);
+//		System.out.println(head);
+//		
+//		data = 40;
+//		insertAtLast(data);
+//		System.out.println("After inserting at Tail: "+data);
+//		System.out.println(head);
+//		
+//		data = 50;
+//		insertAtPos(data, 5);
+//		System.out.println("Inserting node at given Pos: "+data);
+//		System.out.println(head);
+//		
+//		//Deleting Node : 
+//		int pos = 4;
+//		System.out.println("deleting from position: "+pos);
+//		deleteNodeAtPos(pos);
 		System.out.println(head);
-		
-		data = 50;
-		insertAtPos(data, 5);
-		System.out.println("Inserting node at given Pos: "+data);
-		System.out.println(head);
-		
-		//Deleting Node : 
-		int pos = 4;
-		System.out.println("deleting from position: "+pos);
-		deleteNodeAtPos(pos);
-		System.out.println(head);
-		System.out.println(tail.data);
+//		System.out.println(tail.data);
 		
 
 	}

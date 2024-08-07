@@ -1,5 +1,7 @@
 package BinarySearch;
 
+import java.math.BigInteger;
+
 //import javafx.util.Pair;
 //
 //
@@ -12,7 +14,9 @@ package BinarySearch;
 public class FirstLastOccurance {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		System.out.println("timepass checks");
+		
+		
 
 	}
 
