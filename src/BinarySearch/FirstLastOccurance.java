@@ -27,8 +27,6 @@ public class FirstLastOccurance {
 		int s = 0;
 		int e = n-1;
 		int ans=-1;
-		//0,0,1,1,2,2,2,2
-		//(1,3,3,5)
 		while(s <= e){
 			int mid = s+ (e-s)/2;
 
@@ -50,8 +48,6 @@ public class FirstLastOccurance {
 		int s = 0;
 		int e = n-1;
 		int ans = -1;
-
-//		(1,3,3,5)
 		while(s <= e){
 			int mid = s+ (e-s)/2;
 
