@@ -1,5 +1,8 @@
 package BinarySearch;
 
+/**
+ * https://leetcode.com/problems/find-pivot-index/description/
+ */
 public class PivotIndex {
 	
 	public static int pivotIndex(int[] nums) {
